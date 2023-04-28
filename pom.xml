@@ -1,0 +1,80 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.google.api-client</groupId>
+  <artifactId>google-api-client-parent</artifactId>
+
+  <version>1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+  <name>Parent for the Google API Client Library for Java</name>
+  <description>The Google APIs Client Library for Java is a Java client library
+    for accessing any HTTP-based API on the web</description>
+  <url>https://github.com/googleapis/google-api-java-client</url>
+
+
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>8</source>
+          <target>8</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  <scm>
+    <connection>scm:git:https://github.com/googleapis/google-api-java-client.git</connection>
+    <developerConnection>scm:git:ssh:git@github.com:googleapis/google-api-java-client.git</developerConnection>
+    <url>https://github.com/googleapis/google-api-java-client</url>
+  </scm>
+
+  <dependencies>
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.13.2</version>
+    </dependency>
+
+      <dependency>
+        <groupId>com.google.apis</groupId>
+        <artifactId>google-api-services-gmail</artifactId>
+        <version>v1-rev20211108-1.32.1</version>
+      </dependency>
+    <dependency>
+      <groupId>com.google.oauth-client</groupId>
+      <artifactId>google-oauth-client-jetty</artifactId>
+      <version>1.20.0</version>
+    </dependency>
+    <!--<dependency>
+      <groupId>com.amazonaws</groupId>
+      <artifactId>aws-java-sdk</artifactId>
+      <version>1.11.377</version>
+    </dependency> -->
+    <dependency>
+      <groupId>com.amazonaws</groupId>
+      <artifactId>aws-java-sdk-dynamodb</artifactId>
+      <version>1.11.892</version>
+    </dependency>
+
+  </dependencies>
+  <pluginRepositories>
+    <pluginRepository>
+      <releases>
+        <updatePolicy>never</updatePolicy>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <id>central</id>
+      <name>Central Repository</name>
+      <url>https://repo.maven.apache.org/maven2</url>
+    </pluginRepository>
+  </pluginRepositories>
+</project>
